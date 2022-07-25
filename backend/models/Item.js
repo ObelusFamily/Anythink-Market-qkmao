@@ -45,7 +45,6 @@ ItemSchema.methods.updateFavoriteCount = function () {
 };
 
 ItemSchema.methods.toJSONFor = function (user) {
-  // Return a placeholder image if no image is set for an item
   if (!this.image) {
     this.image = "/placeholder.png";
   }
