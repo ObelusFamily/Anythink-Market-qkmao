@@ -45,6 +45,10 @@ ItemSchema.methods.updateFavoriteCount = function() {
 };
 
 ItemSchema.methods.toJSONFor = function(user) {
+  if(!this.image) {
+    this.image = "/placeholder.png"
+  }
+
   return {
     slug: this.slug,
     title: this.title,
